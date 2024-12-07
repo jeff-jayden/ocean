@@ -1,0 +1,44 @@
+{
+  "name": "vue_router_fire",
+  "version": "0.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview",
+    "prepare": "husky",
+    "lint-staged": "lint-staged"
+  },
+  "dependencies": {
+    "eslint": "^8.57.1",
+    "sass": "^1.82.0",
+    "vue": "^3.5.12",
+    "vue-router": "^4.4.5"
+  },
+  "devDependencies": {
+    "@vitejs/plugin-vue": "^5.1.4",
+    "eslint-config-airbnb": "^19.0.4",
+    "eslint-config-prettier": "^9.1.0",
+    "eslint-config-standard": "^17.1.0",
+    "eslint-plugin-prettier": "^5.2.1",
+    "eslint-plugin-vue": "^9.32.0",
+    "globals": "^15.13.0",
+    "husky": "^9.1.7",
+    "lint-staged": "^15.2.10",
+    "prettier": "3.4.2",
+    "vite": "^5.4.10",
+    "vite-plugin-vue-devtools": "^7.5.4"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  },
+  "lint-staged": {
+    "*.{js,ts,jsx,tsx}": [
+      "npx prettier --write .",
+      "eslint  --fix"
+    ]
+  }
+}
