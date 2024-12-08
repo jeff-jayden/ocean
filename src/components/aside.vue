@@ -1,6 +1,7 @@
 <template>
   <div class="side">
     <span>侧边栏</span>
+    aaaa
     <button @click="feature">feature</button>
     <button @click="work">work</button>
     <button @click="toFeatureContent">FeatureContent</button>
