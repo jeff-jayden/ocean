@@ -1,8 +1,8 @@
-import { createRouter, createWebHistory } from 'vue-router'
-import HomePage from '@/views/home-page.vue'
-import Feature from '@/feature/feature.vue'
-import Work from '@/work/work.vue'
-import FeatureContent from '@/feature/component/feature-content.vue'
+import { createRouter, createWebHistory } from 'vue-router';
+import HomePage from '@/views/home-page.vue';
+import Feature from '@/feature/feature.vue';
+import Work from '@/work/work.vue';
+import FeatureContent from '@/feature/component/feature-content.vue';
 
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
@@ -38,6 +38,6 @@ const router = createRouter({
       ],
     },
   ],
-})
+});
 
-export default router
+export default router;

@@ -11,7 +11,7 @@
 </template>
 
 <script setup>
-import Aside from '@/components/aside.vue'
+import Aside from '@/components/aside.vue';
 </script>
 
 <style scoped lang="scss">
