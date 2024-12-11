@@ -1,4 +1,4 @@
-# vue_router_fire
+# ocean-byte
 
 This template should help get you started developing with Vue 3 in Vite.
 

@@ -29,3 +29,5 @@ coverage
 
 *.tsbuildinfo
 .vscode
+
+test_chalk.js
