@@ -16,8 +16,7 @@ import Aside from '@/components/aside.vue';
 
 <style scoped lang="scss">
 .container {
-  width: 100%;
-  height: 100vh;
+  height: 100%;
 
   .header {
     height: 80px;
