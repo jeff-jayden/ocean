@@ -9,7 +9,13 @@
 
 <script setup>
 import { computed, onMounted, ref, watch } from 'vue';
-import { AllApplication, Config } from '@icon-park/vue-next';
+import {
+  AllApplication,
+  Config,
+  MenuFoldOne,
+  MenuUnfoldOne,
+  SendOne,
+} from '@icon-park/vue-next';
 
 const props = defineProps({
   name: String,
@@ -17,7 +23,13 @@ const props = defineProps({
   right: Number || String,
 });
 
-const icons = ref({ AllApplication, Config });
+const icons = ref({
+  AllApplication,
+  Config,
+  MenuFoldOne,
+  MenuUnfoldOne,
+  SendOne,
+});
 
 const registryComp = computed(() => {
   return Object.keys(icons.value).map((icon) => icon.toLowerCase());

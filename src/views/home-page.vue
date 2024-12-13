@@ -17,18 +17,16 @@ import Aside from '@/components/aside.vue';
 <style scoped lang="scss">
 .container {
   width: 100%;
-  height: 100%;
-  background: #fff;
+  height: 100vh;
 
   .header {
-    height: 60px;
-    background: burlywood;
+    height: 80px;
+    background: #0ae6f6;
   }
 
   .content {
     height: 100%;
     display: flex;
-    background: aliceblue;
 
     .view-content {
       flex: 1;
