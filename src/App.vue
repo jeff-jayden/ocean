@@ -6,6 +6,6 @@
 <script setup lang="ts"></script>
 <style>
 .app {
-  height: calc(100vh - 80px);
+  height: calc(100vh - 70px);
 }
 </style>

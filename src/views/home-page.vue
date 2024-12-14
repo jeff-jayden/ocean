@@ -1,6 +1,6 @@
 <template>
   <div class="container">
-    <div class="header">头部导航栏</div>
+    <Header></Header>
     <div class="content">
       <Aside />
       <div class="view-content">
@@ -12,6 +12,7 @@
 
 <script setup>
 import Aside from '@/components/aside.vue';
+import Header from '@/components/header.vue'
 </script>
 
 <style scoped lang="scss">
@@ -19,8 +20,7 @@ import Aside from '@/components/aside.vue';
   height: 100%;
 
   .header {
-    height: 80px;
-    background: #0ae6f6;
+    height: 68px;
   }
 
   .content {
@@ -29,7 +29,7 @@ import Aside from '@/components/aside.vue';
 
     .view-content {
       flex: 1;
-      background: #f6dbdb;
+      background: #fff;
     }
   }
 }

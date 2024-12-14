@@ -1,10 +1,24 @@
 <template>
   <div class="content">特点内容</div>
-  <button @click="handleCollapse">点击收起侧边栏</button>
+  <div>{{ model }}</div>
+  <button @click="changeModel">改变 model 的值</button>
 </template>
 
 <script setup>
 import { inject } from 'vue';
+import { useVModel } from '@vueuse/core';
+
+const props = defineProps({
+  modelValue: String,
+});
+
+const emits = defineEmits(['update:modelValue']);
+
+const model = useVModel(props, 'modelValue', emits);
+
+const changeModel = () => {
+  model.value = 'lisi';
+};
 
 const bl = inject('aside');
 
@@ -16,6 +30,5 @@ const handleCollapse = () => {
 <style scoped>
 .content {
   background-color: #fff;
-  height: 100%;
 }
 </style>
