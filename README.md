@@ -1,14 +1,15 @@
 # ocean-byte
 
-This template should help get you started developing with Vue 3 in Vite.
+待做
 
-## Recommended IDE Setup
+1. 做个好看点的页面
+2. 使用 vuex pinia
+3. 然后升级 ts
 
-[VSCode](https://code.visualstudio.com/) + [Volar](https://marketplace.visualstudio.com/items?itemName=Vue.volar) (and disable Vetur).
+已完成
 
-## Customize configuration
-
-See [Vite Configuration Reference](https://vite.dev/config/).
+1. 使用 vue-router
+2. 代码规范，提交规范一把梭
 
 ## Project Setup
 

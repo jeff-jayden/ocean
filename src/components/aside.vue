@@ -1,77 +1,64 @@
 <template>
-  <div class="side">
-    <el-menu :collapse="isCollapse">
-      <el-sub-menu index="1">
-        <template #title>
-          <div class="row">
-            <Icon name="all-application" size="16" right="5"></Icon>
-            <span class="text">Navigator One</span>
-          </div>
-        </template>
-        <el-menu-item-group>
-          <template #title><span>Group One</span></template>
-          <el-menu-item index="1-1">item one</el-menu-item>
-          <el-menu-item index="1-2">item two</el-menu-item>
-        </el-menu-item-group>
-        <el-menu-item-group title="Group Two">
-          <el-menu-item index="1-3">item three</el-menu-item>
-        </el-menu-item-group>
-        <el-sub-menu index="1-4">
-          <template #title><span>item four</span></template>
-          <el-menu-item index="1-4-1">item one</el-menu-item>
+  <div
+    class="side"
+    :style="{
+      width: isCollapse ? '64px' : '200px',
+      paddingLeft: isCollapse ? '0' : '16px',
+    }"
+  >
+    <el-menu :collapse="isCollapse" @select="handelSelect">
+      <template v-for="(item, index) in menu">
+        <el-sub-menu v-if="item.children">
+          <template #title>
+            <el-icon>
+              <component :is="item.icon"></component>
+            </el-icon>
+            <span>{{ item.label }}</span>
+          </template>
+          <el-menu-item-group>
+            <div v-for="(child, index) in item.children">
+              <el-menu-item :index="child.route">{{
+                child.label
+              }}</el-menu-item>
+            </div>
+          </el-menu-item-group>
         </el-sub-menu>
-      </el-sub-menu>
-      <el-menu-item index="2">
-        <el-icon><icon-menu /></el-icon>
-        <template #title>Navigator Two</template>
-      </el-menu-item>
-      <el-menu-item index="3" disabled>
-        <el-icon><document /></el-icon>
-        <template #title>Navigator Three</template>
-      </el-menu-item>
-      <el-menu-item index="4">
-        <el-icon><setting /></el-icon>
-        <template #title>Navigator Four</template>
-      </el-menu-item>
+        <el-menu-item v-else :index="item.route">
+          <el-icon>
+            <component :is="item.icon"></component>
+          </el-icon>
+          <template #title>
+            <span>{{ item.label }}</span>
+          </template>
+        </el-menu-item>
+      </template>
     </el-menu>
-    <div class="footer" @click="isCollapse = !isCollapse">
+    <div
+      class="footer"
+      @click="isCollapse = !isCollapse"
+      :style="{ right: isCollapse ? '22px' : '34px' }"
+    >
       <Icon
         :name="isCollapse ? 'menu-fold-one' : 'menu-unfold-one'"
         size="16"
       ></Icon>
     </div>
-    <button @click="feature">feature</button>
-    <button @click="work">work</button>
-    <button @click="toFeatureContent">FeatureContent</button>
   </div>
 </template>
 
 <script setup>
-import { useRouter } from 'vue-router';
 import Icon from '@/components/icon.vue';
 import { provide, ref } from 'vue';
+import { menu } from '@/api/menu';
+import { useRouter } from 'vue-router';
 
 const router = useRouter();
-
-const feature = () => {
-  router.push({
-    name: 'feature',
-  });
-};
-
-const work = () => {
-  router.push({
-    name: 'work',
-  });
-};
-
-const toFeatureContent = () => {
-  router.push({
-    name: 'content',
-  });
-};
-
 const isCollapse = ref(false);
+const handelSelect = (routeName) => {
+  router.push({
+    name: routeName,
+  });
+};
 
 defineExpose({
   isCollapse,
@@ -88,23 +75,23 @@ provide('aside', {
   height: 100%;
   display: flex;
   flex-direction: column;
-  background: #e2e2e2;
+  background-color: #fff;
   position: relative;
-
-  .row {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-
-    .text {
-      font-size: 14px;
-    }
-  }
+  padding: 16px;
+  overflow: auto;
 
   .footer {
     position: absolute;
     right: 45px;
     bottom: 30px;
   }
+
+  & :deep(.el-menu) {
+    border-radius: 16px 16px 0 0;
+    border-right: none;
+  }
+
+  margin-right: 16px;
+  border-radius: 16px;
 }
 </style>

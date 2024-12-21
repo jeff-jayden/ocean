@@ -3,6 +3,7 @@ import HomePage from '@/views/home-page.vue';
 import Feature from '@/feature/feature.vue';
 import Work from '@/work/work.vue';
 import FeatureContent from '@/feature/component/feature-content.vue';
+import Message from '@/message/message.vue';
 
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
@@ -34,6 +35,11 @@ const router = createRouter({
           path: 'work',
           name: 'work',
           component: Work,
+        },
+        {
+          path: '/message',
+          name: 'message',
+          component: Message,
         },
       ],
     },

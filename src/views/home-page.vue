@@ -12,12 +12,13 @@
 
 <script setup>
 import Aside from '@/components/aside.vue';
-import Header from '@/components/header.vue'
+import Header from '@/components/header.vue';
 </script>
 
 <style scoped lang="scss">
 .container {
   height: 100%;
+  padding: 16px 24px;
 
   .header {
     height: 68px;
