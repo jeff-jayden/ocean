@@ -1,7 +1,9 @@
 <template>
-  <div class="content">特点内容</div>
-  <div>{{ model }}</div>
-  <button @click="changeModel">改变 model 的值</button>
+  <div class="content">
+    特点内容
+    <div>{{ model }}</div>
+    <button @click="changeModel">改变 model 的值</button>
+  </div>
 </template>
 
 <script setup>

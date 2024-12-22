@@ -1,6 +1,6 @@
 <template>
   <div class="container">
-    <Header></Header>
+    <Header />
     <div class="content">
       <Aside />
       <div class="view-content">
@@ -31,6 +31,8 @@ import Header from '@/components/header.vue';
     .view-content {
       flex: 1;
       background: #fff;
+      border-radius: 16px;
+      padding: 16px;
     }
   }
 }

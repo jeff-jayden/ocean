@@ -5,6 +5,7 @@
 1. 做个好看点的页面
 2. 使用 vuex pinia
 3. 然后升级 ts
+4. 将 open-design 集成到项目中
 
 已完成
 
