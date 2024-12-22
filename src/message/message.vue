@@ -1,6 +1,7 @@
 <template>
   <div class="message-container">
     message组件
+    <Button />
 
     <el-button plain @click="centerDialogVisible = true">
       Click to open the Dialog
@@ -30,8 +31,7 @@
     <el-drawer
       v-model="drawer"
       title="I am the title"
-      :direction="direction"
-      :before-close="handleClose"
+      direction="rtl"
     >
       <span>Hi, there!</span>
     </el-drawer>
@@ -40,6 +40,7 @@
 
 <script setup>
 import { ref } from 'vue';
+import Button from '@/components/button.jsx';
 
 const centerDialogVisible = ref(false);
 const drawer = ref(false);

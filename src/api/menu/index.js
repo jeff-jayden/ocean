@@ -8,14 +8,17 @@ const menu = [
       {
         label: '制作任务',
         route: 'feature',
+        icon: Menu,
       },
       {
         label: '查看任务',
         route: 'work',
+        icon: Menu,
       },
       {
         label: '分享任务',
         route: 'content',
+        icon: Menu,
       },
     ],
   },

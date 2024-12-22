@@ -14,13 +14,11 @@
               </el-icon>
               <span>{{ item.label }}</span>
             </template>
-            <el-menu-item-group>
-              <div v-for="(child, index) in item.children">
-                <el-menu-item :index="child.route">{{
-                  child.label
-                }}</el-menu-item>
-              </div>
-            </el-menu-item-group>
+            <div v-for="(child, index) in item.children">
+              <el-menu-item :index="child.route">
+                <component :is="renderMenuItem(child)"></component>
+              </el-menu-item>
+            </div>
           </el-sub-menu>
           <el-menu-item v-else :index="item.route">
             <el-icon>
@@ -56,12 +54,14 @@
   </div>
 </template>
 
-<script setup>
+<script setup lang="jsx">
 import { CaretBottom } from '@element-plus/icons-vue';
 import { computed, onMounted } from 'vue';
 import { useStore } from 'vuex';
 import { useRouter } from 'vue-router';
 import menu from '@/api/menu/index.js';
+import { renderMenuItem } from './utils/render.jsx';
+import MenuItemComponent from './utils/menu-item-component.vue';
 
 const store = useStore();
 const router = useRouter();
