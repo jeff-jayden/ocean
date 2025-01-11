@@ -18,14 +18,14 @@ import Header from '@/components/header.vue';
 <style scoped lang="scss">
 .container {
   height: 100%;
-  padding: 16px 24px;
+  padding: 16px;
 
   .header {
     height: 68px;
   }
 
   .content {
-    height: 100%;
+    height: calc(100% - 16px);
     display: flex;
 
     .view-content {

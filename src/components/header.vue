@@ -2,7 +2,7 @@
   <div class="header">
     <div class="header-left">
       <div class="img"></div>
-      <div class="title">ocean</div>
+      <div class="title">技术中台</div>
     </div>
     <div class="header-center">
       <el-menu mode="horizontal" @select="handelSelect">
@@ -93,18 +93,22 @@ onMounted(() => {
   display: flex;
   align-items: center;
 
+  border: 1px solid #f4efef;
+  margin-bottom: 16px;
+  border-radius: 12px;
+  padding: 0 16px;
+
   .header-left {
     width: 216px;
     display: flex;
     align-items: center;
     padding-left: 5px;
-    padding-bottom: 30px;
 
     .title {
       font-weight: 500;
-      font-size: 68px;
+      font-size: 22px;
       text-align: center;
-      line-height: 1.5;
+      line-height: 22px;
     }
   }
 
@@ -113,13 +117,13 @@ onMounted(() => {
     display: flex;
     align-items: center;
     justify-content: start;
-    padding-bottom: 10px;
 
     & :deep(.el-menu) {
       border-radius: 16px;
       padding: 16px;
       width: 100%;
       border-bottom: none;
+      background-color: transparent;
 
       & .el-menu-item.is-active,
       .el-sub-menu__title {
@@ -136,7 +140,6 @@ onMounted(() => {
     padding: 5px;
     border-radius: 24px;
     margin-left: 50px;
-    margin-bottom: 10px;
     &:hover {
       cursor: pointer;
     }
@@ -172,6 +175,24 @@ onMounted(() => {
     display: flex;
     align-items: center;
     justify-content: center;
+  }
+}
+</style>
+
+<style lang="scss">
+.el-menu--popup-container {
+  .el-menu--popup-right-start {
+    padding: 8px;
+    border-radius: 16px;
+  }
+}
+
+.el-popper.is-light.is-pure {
+  border: none;
+  background-color: transparent;
+
+  .el-menu-item-group__title {
+    padding: 0;
   }
 }
 </style>

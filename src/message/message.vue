@@ -1,6 +1,7 @@
 <template>
   <div class="message-container">
     message组件
+
     <Button />
 
     <el-button plain @click="centerDialogVisible = true">
@@ -10,6 +11,8 @@
     <el-button type="primary" style="margin-left: 16px" @click="drawer = true">
       open
     </el-button>
+
+    <text_ellipsis text="hello world"></text_ellipsis>
 
     <el-dialog
       v-model="centerDialogVisible"
@@ -40,7 +43,8 @@
 
 <script setup>
 import { ref } from 'vue';
-import Button from '@/components/button.jsx';
+import Button from '@/components/button_composition_jsx.vue';
+import Text_ellipsis from '@/components/text_ellipsis.vue'
 
 const centerDialogVisible = ref(false);
 const drawer = ref(false);
