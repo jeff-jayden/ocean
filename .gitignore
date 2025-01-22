@@ -31,4 +31,4 @@ coverage
 .vscode
 
 test
-/src/byte
+/app/interview_plan
