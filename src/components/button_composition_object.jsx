@@ -5,12 +5,12 @@ export default defineComponent({
   props: {
     text: {
       type: String,
-      default: '按钮'
+      default: '按钮',
     },
     onClick: {
       type: Function,
-      default: () => {}
-    }
+      default: () => {},
+    },
   },
   setup(props) {
     const clickCount = ref(0);
@@ -25,7 +25,7 @@ export default defineComponent({
         {props.text} - 点击次数: {clickCount.value}
       </button>
     );
-  }
+  },
 });
 
 // 写法差不多，只是一个函数，一个对象的形式

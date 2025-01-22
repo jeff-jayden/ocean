@@ -36,5 +36,4 @@ export default defineComponent({
   background-color: #fff;
   border: #909399 1px solid;
 }
-
 </style>
