@@ -1,6 +1,6 @@
 import { ElMessage } from 'element-plus';
 import { isPlainObject, omit, pick, uniqueId } from 'lodash-es';
-import { MaybeRef, unref, watch } from 'vue'
+import { MaybeRef, unref, watch } from 'vue';
 
 // export const partitionPick = (source, keys) => [
 //   pick(source, keys),
