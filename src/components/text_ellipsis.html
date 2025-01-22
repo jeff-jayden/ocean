@@ -1,0 +1,25 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="styles.css" />
+    <title>文本超出省略示例</title>
+
+    <style>
+      .text-container {
+        width: 300px; /* 设置容器宽度 */
+        white-space: nowrap; /* 禁止文本换行 */
+        overflow: hidden; /* 隐藏超出容器的部分 */
+        text-overflow: ellipsis; /* 当文本溢出时显示省略号 */
+      }
+    </style>
+  </head>
+
+  <body>
+    <div class="text-container">
+      这是一段非常长的文本内容，用于展示当文本长度超过容器宽度时，如何实现自动省略并显示省略号。它可能会包含很多的文字，以确保能够触发超出的效果。这段文本的目的是让大家直观地看到文本超出处理的样式呈现，通过合理的
+      CSS 样式设置，我们可以优雅地处理这种情况，让页面看起来更加整洁和美观。
+    </div>
+  </body>
+</html>
