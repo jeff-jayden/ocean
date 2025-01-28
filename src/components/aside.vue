@@ -49,7 +49,7 @@
 <script setup>
 import Icon from '@/components/icon.vue';
 import { provide, ref } from 'vue';
-import { menu } from '@/api/menu';
+import { menu } from '@/api/menu/index.js';
 import { useRouter } from 'vue-router';
 
 const router = useRouter();
