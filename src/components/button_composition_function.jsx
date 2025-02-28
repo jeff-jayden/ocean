@@ -8,14 +8,16 @@ export default defineComponent(
       count.value++;
     };
 
-    return () => (
-      <>
-        <div>{count.value}</div>
-        <button onClick={add}>click me</button>
-      </>
-    );
+    return function () {
+      return (
+        <>
+          <div>{count.value}</div>
+          <button onClick={add}>click me</button>
+        </>
+      );
+    };
 
-    /*return {
+    /* return {
       count,
       add,
       render() {
@@ -27,7 +29,7 @@ export default defineComponent(
           </>
         );
       },
-    };*/
+    }; */
   },
   {
     props: {
