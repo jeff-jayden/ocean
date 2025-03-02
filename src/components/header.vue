@@ -93,9 +93,7 @@ onMounted(() => {
   display: flex;
   align-items: center;
 
-  border: 1px solid #f4efef;
   margin-bottom: 16px;
-  border-radius: 12px;
   padding: 0 16px;
 
   .header-left {
@@ -146,7 +144,6 @@ onMounted(() => {
 
     .popover-content {
       display: flex;
-      color: #969aa0;
 
       .username {
         display: flex;
