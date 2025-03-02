@@ -6,7 +6,7 @@
     </div>
     <div class="header-center">
       <el-menu mode="horizontal" @select="handelSelect">
-        <template v-for="(item, index) in menu">
+        <template v-for="(item, indexf) in menu" :key="indexf">
           <el-sub-menu v-if="item.children">
             <template #title>
               <el-icon>
@@ -14,7 +14,7 @@
               </el-icon>
               <span>{{ item.label }}</span>
             </template>
-            <div v-for="(child, index) in item.children">
+            <div v-for="(child, indexz) in item.children" :key="indexz">
               <el-menu-item :index="child.route">
                 <component :is="renderMenuItem(child)"></component>
               </el-menu-item>

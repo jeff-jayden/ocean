@@ -2,15 +2,16 @@
 
 待做
 
-1. 做个好看点的页面
-2. 使用 vuex pinia
-3. 然后升级 ts
-4. 将 open-design 集成到项目中
+1. 使用 docker，nginx
 
 已完成
 
 1. 使用 vue-router
 2. 代码规范，提交规范一把梭
+3. 做个好看点的页面
+4. 使用 vuex pinia
+5. 然后升级 ts
+6. 将 open-design 集成到项目中
 
 ## Project Setup
 
