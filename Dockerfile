@@ -13,7 +13,7 @@ RUN git clone https://github.com/jeff-jayden/ocean.git /app && \
     git checkout master
 
 # 安装依赖并编译前端代码
-RUN pnpm i && \
+RUN npm i && \
     npm run build
 
 # 构建 Nginx 镜像，版本根据项目需要更换
